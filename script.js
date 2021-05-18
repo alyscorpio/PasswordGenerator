@@ -7,6 +7,11 @@ var littleCharacters= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 var numberCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 var specialCharacters = ["!", "@", "#", "$", "&", "%", "?", "*"]
 
+console.log(bigCharacters);
+console.log(littleCharacters);
+console.log(numberCharacters);
+console.log(specialCharacters);
+
 // LENGTH OF PASSWORD
 // create function to generate password between 8 and 128 characters
 
