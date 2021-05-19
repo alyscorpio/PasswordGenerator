@@ -16,55 +16,59 @@ console.log(specialCharacters);
 // PASSWORD CRITERIA
 // prompt user about password length
 
-generateBtn.addEventListener("click", promptMe);
+generateBtn.addEventListener("click", generatePassword);
 
-function promptMe() {
+function generatePassword() {
 
   var passLength = window.prompt("How long should the password be?");
+    console.log(passLength);
     // set password parameters between 8 and 128 characters
     if (passLength < 8) {
       window.alert("Sorry, that's too short. Passwords must be at least 8 characters to ensure your safety!");
+      return;
     }
     if (passLength > 128) {
       window.alert("Woah, that's a little too long! Please pick a length under 128 characters.");
+      return;
     }
-    
+  
   var passCap = window.confirm("Lowercase characters?");
-    // include uppercase characters if user selects okay
-    if (passCap === true) {
-      finalArray = finalArray.concat(bigCharacters);
-      console.log(finalArray);
-    }
+  console.log(passCap);
+
+  // include uppercase characters if user selects okay
+  if (passCap === true) {
+    finalArray = finalArray.concat(bigCharacters);
+  }
 
   var passNoCap = window.confirm("Uppercase?");
-    // include lowercase characters if user selects okay
-    if (passNoCap === true) {
-      finalArray = finalArray.concat(littleCharacters);
-      console.log(finalArray);
-    }
+  console.log(passNoCap);
+
+  // include lowercase characters if user selects okay
+  if (passNoCap === true) {
+    finalArray = finalArray.concat(littleCharacters);
+  }
     
   var passNumb = window.confirm("Numbers?");
-    // include numbers if user selects okay
-    if (passNumb === true) {
-      finalArray = finalArray.concat(numberCharacters);
-      console.log(finalArray);
-    }
+  console.log(passNumb);
+
+  // include numbers if user selects okay
+  if (passNumb === true) {
+    finalArray = finalArray.concat(numberCharacters);
+  }
 
   var passSpec = window.confirm("Special characters?");
+  console.log(passSpec);
+
   // include special characters if user selects okay
   if (passSpec === true) {
     finalArray = finalArray.concat(specialCharacters);
-    console.log(finalArray);
   }
   
+  console.log(finalArray);
+ 
 }
 
 
-
-console.log(passCap);
-console.log(passNoCap);
-console.log(passNumb);
-console.log(passSpec);
 
 // GENERATING PASSWORD
 var password = "";
@@ -75,12 +79,12 @@ for (var i = 0; i < passLength; i++) {
 console.log(password);
 
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
-// }
+  passwordText.value = password;
+}
 
 // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
