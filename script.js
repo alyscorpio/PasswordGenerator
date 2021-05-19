@@ -5,62 +5,83 @@ var generateBtn = document.querySelector("#generate");
 var bigCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var littleCharacters= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numberCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
-var specialCharacters = ["!", "@", "#", "$", "&", "%", "?", "*"]
+var specialCharacters = ["!", "@", "#", "$", "&", "%", "?", "*"];
+var finalArray = [];
 
 console.log(bigCharacters);
 console.log(littleCharacters);
 console.log(numberCharacters);
 console.log(specialCharacters);
 
-// click function for generate button
-generateBtn.addEventListener("click", function enterInfo() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
+// PASSWORD CRITERIA
+// prompt user about password length
+
+generateBtn.addEventListener("click", promptMe);
+
+function promptMe() {
+
+  var passLength = window.prompt("How long should the password be?");
+    // set password parameters between 8 and 128 characters
+    if (passLength < 8) {
+      window.alert("Sorry, that's too short. Passwords must be at least 8 characters to ensure your safety!");
+    }
+    if (passLength > 128) {
+      window.alert("Woah, that's a little too long! Please pick a length under 128 characters.");
+    }
+    
+  var passCap = window.confirm("Lowercase characters?");
+    // include uppercase characters if user selects okay
+    if (passCap === true) {
+      finalArray = finalArray.concat(bigCharacters);
+      console.log(finalArray);
+    }
+
+  var passNoCap = window.confirm("Uppercase?");
+    // include lowercase characters if user selects okay
+    if (passNoCap === true) {
+      finalArray = finalArray.concat(littleCharacters);
+      console.log(finalArray);
+    }
+    
+  var passNumb = window.confirm("Numbers?");
+    // include numbers if user selects okay
+    if (passNumb === true) {
+      finalArray = finalArray.concat(numberCharacters);
+      console.log(finalArray);
+    }
+
+  var passSpec = window.confirm("Special characters?");
+  // include special characters if user selects okay
+  if (passSpec === true) {
+    finalArray = finalArray.concat(specialCharacters);
+    console.log(finalArray);
+  }
+  
 }
 
-// when button is clicked, user is prompted for password parameters
 
-// LENGTH OF PASSWORD
-// create function to generate password between 8 and 128 characters
-var chooseLength = window.prompt("How long do you want your password to be? (Pick a number between 8 & 128 to ensure maximum safety!)");
-  if (userLength < 8) {
-    window.alert("Oh no, that password length is too short! Please choose a number between 8 & 128.");
-    return;
-  }
 
-  // if user input is > 128, reject
-  if (userLength > 128) {
-    window.alert("Uh oh! Your password is too long. Please try again.");
-    return;
-  }
-
-// PASSWORD CRITERIA PROMPTS
-// prompt user about password criteria (length, uppercase, lowercase, numbers, special characters)
-window.prompt ("First, give me some guidelines for your password.")
-
-// When the user clicks on <div>, open the popup
-function 
-
-function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
+console.log(passCap);
+console.log(passNoCap);
+console.log(passNumb);
+console.log(passSpec);
 
 // GENERATING PASSWORD
-// function to generate random password based on criteria (if, then)
+var password = "";
+
+for (var i = 0; i < passLength; i++) {
+  password = password + finalArray[Math.floor(Math.random() * finalArray.length)];
+}
+console.log(password);
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
-}
+//   passwordText.value = password;
+// }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
 
