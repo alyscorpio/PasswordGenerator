@@ -1,11 +1,45 @@
+
+var bigCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var littleCharacters= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numberCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
+var specialCharacters = ["!", "@", "#", "$", "&", "%", "?", "*"];
+var passlength = '';
+var finalArray = [];
+
+console.log(bigCharacters)
+console.log(littleCharacters)
+console.log(numberCharacters)
+console.log(specialCharacters)
+
 var generateBtn = document.querySelector('#generate');
+
 generateBtn.addEventListener('click', formPop);
 
-// When the user clicks on <div>, open the popup
 function formPop() {
   var popup = document.getElementById("myForm");
   popup.classList.toggle("show");
 }
+
+var passCap = document.querySelector('#cap');
+var passNumb = document.querySelector('#numb');
+var passSpec = document.querySelector('#spec');
+
+function passInfo() {
+  if (passCap === true) {
+    finalArray = finalArray.concat(bigCharacters);
+  }
+
+  if (passNumb === true) {
+    finalArray = finalArray.concat(bigCharacters);
+  }
+
+  if (passSpec === true) {
+    finalArray = finalArray.concat(bigCharacters);
+  }
+
+  console.log(finalArray)
+}
+
 
 // var generateBtn = document.querySelector('#generate');
 // var formPop = document.querySelector('#form')
