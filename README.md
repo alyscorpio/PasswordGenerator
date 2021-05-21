@@ -2,19 +2,27 @@
 
 ## RUDE PASSWORD GENERATOR
 
-## Description
+## DESCRIPTION
+I was asked to produce an application that generates passwords according to specifications set by the user. To accomplish this task, I used Javascript to create a series of prompts that allow the user to select their desired password length, and choose if they would like uppercase letters, lowercase letters, numbers, and special characters in their password. Then, I created a series of functions that applied the user's selections to the final password. 
+
+To make my application a little bit more fun, I gave my password generator a rude personality by adding snarky comments into the prompts. 
+
+This was my first big project using Javascript, and it proved to be really challenging, but so rewarding in the end! It really helped me build confidence in using strings, arrays, and functions – and taught me about new features like 'window.prompt'.
 
 
 ## INSTALLATION 
-To view finished webpage, go to https://alyscorpio.github.io/RudePasswordGenerator/
-![Screenshot](./images/Screen Shot 2021-05-21 at 3.47.11 PM.png)
+To view finished webpage, go to https://alyscorpio.github.io/RudePasswordGenerator/.
+To view repository on Github, go to https://github.com/alyscorpio/RudePasswordGenerator.
 
-![Here's a screenshot of the application!](./images/screenshot.png)
+Here is a screenshot of the application:
+![Screenshot](./images/screenshot.png)
 
 ## USAGE
+To use the password generator, load the page and click on the 'generate password' button at the bottom of the card. You will then recieve a series of prompts asking how long you would like your password to be, and what kinds of characters you would like it to have. Once the final prompt is submitted, your new password will appear in the center of the card.
 
 ## Credits
-Javascript help from https://www.w3schools.com/java/default.asp
+Application created under the direction of UCLA Extension Coding Bootcamp.
+Javascript help from https://www.w3schools.com/java/default.asp.
 
 ## License
 MIT License
