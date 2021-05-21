@@ -1,3 +1,4 @@
+var generateBtn = document.querySelector('#generate');
 
 var bigCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var littleCharacters= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -6,10 +7,10 @@ var specialCharacters = ["!", "@", "#", "$", "&", "%", "?", "*"];
 var passlength = '';
 var finalArray = [];
 
-console.log(bigCharacters)
-console.log(littleCharacters)
-console.log(numberCharacters)
-console.log(specialCharacters)
+console.log(bigCharacters);
+console.log(littleCharacters);
+console.log(numberCharacters);
+console.log(specialCharacters);
 
 var generateBtn = document.querySelector('#generate');
 generateBtn.addEventListener('click', formPop);
@@ -24,54 +25,7 @@ sumbitBtn.addEventListener('click', passCriteria);
 
 var passLength = document.querySelector('#p-length');
 
-
-
-
-function passCriteria() {
-
-  var sumbitBtn = document.querySelector('#submit');
-  sumbitBtn.addEventListener('click', passCriteria);
-
-  var passLength = document.getElementById('#p-length');
-    if (passLength < 8) {
-      window.alert("Sorry, that's too short, please try again.");
-      return;
-    }
-    if (passLength > 128) {
-      window.alert("Sorry, that's too long, please try again.");
-      return;
-    }
-    if (passLength > 8, passlegnth < 128) {
-      console.log(passLength);
-    }
- 
-  var passCap = document.getElementById('#cap');
-    if (passCap === 'yes') {
-      finalArray = finalArray.concat(bigCharacters);
-    }
-  console.log(passCap)
-
-  var passLittle = document.getElementById('#little');
-    if (passLittle === 'yes') {
-      finalArray = finalArray.concat(littleCharacters);
-    }
-  console.log(passLittle);
-
-  var passNumb = document.getElementById('#numb');
-    if (passNumb === 'yes') {
-      finalArray = finalArray.concat(numberCharacters);
-    }
-  console.log(passNumb);
-
-  var passSpec = document.getElementById('#spec');
-    if (passSpec === 'yes') {
-      finalArray = finalArray.concat(specialCharacters);
-    }
-  console.log(passLittle);
-
-  console.log(finalArray);
-
-}
+function generatePassword()
 
 // if (passLength < 8) {
   //       window.alert("Sorry, that's too short. Passwords must be at least 8 characters to ensure your safety!");
