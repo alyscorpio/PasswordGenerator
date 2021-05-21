@@ -27,3 +27,49 @@ header {
   padding-top: 10 px;
   color: whitesmoke;
 }
+
+.btn {
+  border: none;
+  display: inline-block;
+  font-size: 25px;
+  background-color: darkred;
+  line-height: 25px;
+  text-align: center;
+  margin: 15px 15px 15px 20px;
+  padding: 14px 34px;
+}
+
+.card {
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 10px;
+  border-width: 5px;
+  font-size: 20px;
+  padding: 30px, 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card-header {
+  content: " ";
+  height: 5px;
+  width: 10px;
+  background: whitesmoke;
+  color:black;
+  display:block;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100px;
+  padding-top: 20px;
+  color: whitesmoke;
+  text-align: center;
+}
