@@ -12,33 +12,101 @@ console.log(numberCharacters)
 console.log(specialCharacters)
 
 var generateBtn = document.querySelector('#generate');
-
 generateBtn.addEventListener('click', formPop);
 
 function formPop() {
-  var popup = document.getElementById("myForm");
-  popup.classList.toggle("show");
+  var popup = document.getElementById('myForm');
+  popup.classList.toggle('show');
 }
 
-var passCap = document.querySelector('#cap');
-var passNumb = document.querySelector('#numb');
-var passSpec = document.querySelector('#spec');
+var sumbitBtn = document.querySelector('#submit');
+sumbitBtn.addEventListener('click', passCriteria);
 
-function passInfo() {
-  if (passCap === true) {
-    finalArray = finalArray.concat(bigCharacters);
-  }
+var passLength = document.querySelector('#p-length');
 
-  if (passNumb === true) {
-    finalArray = finalArray.concat(bigCharacters);
-  }
 
-  if (passSpec === true) {
-    finalArray = finalArray.concat(bigCharacters);
-  }
 
-  console.log(finalArray)
+
+function passCriteria() {
+
+  var sumbitBtn = document.querySelector('#submit');
+  sumbitBtn.addEventListener('click', passCriteria);
+
+  var passLength = document.getElementById('#p-length');
+    if (passLength < 8) {
+      window.alert("Sorry, that's too short, please try again.");
+      return;
+    }
+    if (passLength > 128) {
+      window.alert("Sorry, that's too long, please try again.");
+      return;
+    }
+    if (passLength > 8, passlegnth < 128) {
+      console.log(passLength);
+    }
+ 
+  var passCap = document.getElementById('#cap');
+    if (passCap === 'yes') {
+      finalArray = finalArray.concat(bigCharacters);
+    }
+  console.log(passCap)
+
+  var passLittle = document.getElementById('#little');
+    if (passLittle === 'yes') {
+      finalArray = finalArray.concat(littleCharacters);
+    }
+  console.log(passLittle);
+
+  var passNumb = document.getElementById('#numb');
+    if (passNumb === 'yes') {
+      finalArray = finalArray.concat(numberCharacters);
+    }
+  console.log(passNumb);
+
+  var passSpec = document.getElementById('#spec');
+    if (passSpec === 'yes') {
+      finalArray = finalArray.concat(specialCharacters);
+    }
+  console.log(passLittle);
+
+  console.log(finalArray);
+
 }
+
+// if (passLength < 8) {
+  //       window.alert("Sorry, that's too short. Passwords must be at least 8 characters to ensure your safety!");
+  //       return;
+  //     }
+  //     if (passLength > 128) {
+  //       window.alert("Woah, that's a little too long! Please pick a length under 128 characters.");
+  //       return;
+  //     }
+
+//   var passCap = document.getElementById('myform').elements['cap'].value;
+//     if (passCap === 'true') {
+//       finalArray = finalArray.concat(bigCharacters);
+//     }
+
+//   var passLittle = document.getElementById('myform').elements['little'].value;
+//     if (passLittle === 'true') {
+//       finalArray = finalArray.concat(littleCharacters);
+//     }
+  
+//   var passNumb = document.getElementById('myform').elements['numb'].value;
+//     if (passNumb === 'true') {
+//       finalArray = finalArray.concat(numberCharacters);
+//     }
+
+//   var passSpec = document.getElementbyId('myform').elements['spec'].value;
+//     if (passSpec === 'true') {
+//       finalArray = finalArray.concat(specialCharacters);
+//     }
+
+//   console.log(finalArray)
+
+// }
+
+
 
 
 // var generateBtn = document.querySelector('#generate');
