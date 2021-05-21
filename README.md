@@ -9,7 +9,7 @@
 To view finished webpage, go to https://alyscorpio.github.io/RudePasswordGenerator/
 ![Screenshot](./images/Screen Shot 2021-05-21 at 3.47.11 PM.png)
 
-![Here's a screenshot of the application!](screenshot.png)
+![Here's a screenshot of the application!](./images/screenshot.png)
 
 ## USAGE
 
