@@ -22,21 +22,11 @@ body {
 }
 
 header {
-  text-align: left;
+  text-align: center;
+  font-size: 40px;
   padding: 20px;
   padding-top: 10 px;
   color: whitesmoke;
-}
-
-.btn {
-  border: none;
-  display: inline-block;
-  font-size: 25px;
-  background-color: darkred;
-  line-height: 25px;
-  text-align: center;
-  margin: 15px 15px 15px 20px;
-  padding: 14px 34px;
 }
 
 .card {
@@ -50,17 +40,41 @@ header {
   margin: 0 auto;
 }
 
+.card {
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 10px;
+  border-width: 5px;
+  font-size: 20px;
+  padding: 30px, 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
 .card-header {
-  content: " ";
-  height: 5px;
-  width: 10px;
+  height: 50px;
+  max-width: 800px;
   background: whitesmoke;
-  color:black;
-  display:block;
+  color: black;
+  display: block;
+  text-align: center;
 }
 
 .card-footer {
   text-align: center;
+}
+
+.btn {
+  border: none;
+  display: inline-block;
+  font-size: 25px;
+  background-color: darkred;
+  color: whitesmoke;
+  line-height: 25px;
+  text-align: center;
+  margin: 15px 15px 15px 20px;
+  padding: 14px 34px;
 }
 
 #password {
@@ -68,8 +82,12 @@ header {
   -moz-appearance: none;
   appearance: none;
   display: block;
-  width: 100px;
-  padding-top: 20px;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: black;
   color: whitesmoke;
   text-align: center;
 }
