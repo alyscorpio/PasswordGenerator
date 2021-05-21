@@ -1,11 +1,13 @@
 # <RudePasswordGenerator>
 
+## RUDE PASSWORD GENERATOR
+
 ## Description
 
 
 ## INSTALLATION 
 To view finished webpage, go to https://alyscorpio.github.io/RudePasswordGenerator/
-![Screenshot](RudePasswordGenerator/images/Screen Shot 2021-05-21 at 3.47.11 PM.png)
+![Screenshot](./images/Screen Shot 2021-05-21 at 3.47.11 PM.png)
 
 To view Repository edits, go to 
 
