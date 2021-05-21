@@ -16,29 +16,29 @@ var finalArray = [];
 function generatePassword() {
 
 // LENGTH
-var passLength = window.prompt("How many characters do you want?");
+var passLength = window.prompt("How many characters do you want in your stupid little password??");
   if (passLength < 8) {
     window.alert("Too short! Are you trying to get hacked?! Password lengths have to be at least 8 characters, DUH.");
     return;
   }
   if (passLength > 128) {
-    window.alert("Wayyyyy too long! You think you could even remember all of that? Pick a length under 128 characters.");
+    window.alert("Wayyyyy too long! Like you could even remember all of that. Pick a length under 128 characters.");
     return;
   }
 
 // CAPITAL LETTERS
-var passCap = window.confirm("Uppercase?");
+var passCap = window.confirm("Ugh, fine. Do you want any ugly UPPERCASE letters in your stupid password?");
 
 // LOWERCASE LETTERS
-var passNoCap = window.confirm("Lowercase characters?");
+var passNoCap = window.confirm("Of course. How predictable. How about lame LOWERCASE letters?");
 console.log(passCap);
 
 // NUMBERS
-var passNumb = window.confirm("Numbers?");
+var passNumb = window.confirm("Could you at least try to surprise me? What about Nausiating NUMBERS?");
 console.log(passNumb);
 
 // SPECIAL CHARACTERS
-var passSpec = window.confirm("Special characters?");
+var passSpec = window.confirm("You think you're special? Then how about we add some superfluous SPECIAL CHARACTERS?");
 console.log(passSpec);
 
   // Include capital letters if user approves
