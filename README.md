@@ -3,13 +3,16 @@
 ## Description
 
 
-## Installation
-To view finished webpage, go to 
+## INSTALLATION 
+To view finished webpage, go to https://alyscorpio.github.io/RudePasswordGenerator/
+![Screenshot](RudePasswordGenerator/images/Screen Shot 2021-05-21 at 3.47.11 PM.png)
 
 To view Repository edits, go to 
 
-## Credits
+## USAGE
 
+## Credits
+Javascript help from https://www.w3schools.com/java/default.asp
 
 ## License
 MIT License
@@ -25,8 +28,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 SOFTWARE.
 
 ## Badges
-https://img.shields.io/badge/REFRACTOR-refractor__homework__2021-blue.
+https://img.shields.io/badge/RudePasswordGenerator-PassGen__Homework__2021-green
 
 ## Features
-<link rel="stylesheet" href="./assets/css/style.css">
 <link rel="html" href=".index.html">
+<link src="./assets/java/script.js">
+<link rel="stylesheet' href='./assets/css/style.css">
