@@ -67,24 +67,23 @@ console.log(passSpec);
 
 console.log(finalArray);
 
-// Final password is an empty string
-  var finalPass = "";
+var finalPass = '';
 
-// For loop to generate a random set of characters from the finalArray, the length of passLength
   for (var i = 0; i< passLength; i++) {
     finalPass = finalPass + finalArray[Math.floor(Math.random() * finalArray.length)];
   }
   console.log(finalPass);
 
 return finalPass;
+
 }
+
 
 function writePassword () {
   var finalPass = generatePassword();
   var passText = document.querySelector('#password');
 
-  passText.value = password;
-
+  passText.value = finalPass;
 }
 
 generateBtn.addEventListener('click', writePassword);
