@@ -13,51 +13,66 @@ console.log(littleCharacters);
 console.log(numberCharacters);
 console.log(specialCharacters);
 
-function generatePassword()
+function generatePassword() {
 
-// LENGTH
-var passLength = window.prompt("How many characters do you want?");
-  if (passLength < 8) {
-    window.alert("Too short! Are you trying to get hacked?! Password lengths have to be at least 8 characters, DUH.");
-    return;
+  // LENGTH
+  var passLength = window.prompt("How many characters do you want?");
+    if (passLength < 8) {
+      window.alert("Too short! Are you trying to get hacked?! Password lengths have to be at least 8 characters, DUH.");
+      return;
+    }
+    if (passLength > 128) {
+      window.alert("Wayyyyy too long! You think you could even remember all of that? Pick a length under 128 characters.");
+      return;
+    }
+
+  // CAPITAL LETTERS
+  var passCap = window.confirm("Uppercase?");
+
+  if (passCap === true) {
+    finalArray = finalArray.concat(bigCharacters);
   }
-  if (passLength > 128) {
-    window.alert("Wayyyyy too long! You think you could even remember all of that? Pick a length under 128 characters.");
-    return;
+
+  // LOWERCASE LETTERS
+  var passNoCap = window.confirm("Lowercase characters?");
+  console.log(passCap);
+
+  if (passNoCap === true) {
+    finalArray = finalArray.concat(littleCharacters);
   }
 
-// CAPITAL LETTERS
-var passCap = window.confirm("Uppercase?");
+  // NUMBERS
+  var passNumb = window.confirm("Numbers?");
+  console.log(passNumb);
 
-if (passCap === true) {
-  finalArray = finalArray.concat(bigCharacters);
+  if (passNumb === true) {
+    finalArray = finalArray.concat(numberCharacters);
+  }
+
+  // SPECIAL CHARACTERS
+  var passSpec = window.confirm("Special characters?");
+  console.log(passSpec);
+
+  if (passSpec === true) {
+    finalArray = finalArray.concat(specialCharacters);
+  }
+
+  console.log(finalArray);
+
+  // Final password is an empty string
+  var finalPass = "";
+
+  // For loop to generate a random set of characters from the finalArray, the length of passLength
+  for (var i = 0; i< userLength; i++) {
+    finalPass = finalPass + finalarray[Math.floor(Math.random() * finalArray.length)];
+  }
+  console.log(finalPass);
+
+  return finalPass;
 }
 
-// LOWERCASE LETTERS
-var passNoCap = window.confirm("Lowercase characters?");
-console.log(passCap);
 
-if (passNoCap === true) {
-  finalArray = finalArray.concat(littleCharacters);
-}
 
-// NUMBERS
-var passNumb = window.confirm("Numbers?");
-console.log(passNumb);
-
-if (passNumb === true) {
-  finalArray = finalArray.concat(numberCharacters);
-}
-
-// SPECIAL CHARACTERS
-var passSpec = window.confirm("Special characters?");
-console.log(passSpec);
-
-if (passSpec === true) {
-  finalArray = finalArray.concat(specialCharacters);
-}
-
-console.log(finalArray);
 
 
 // // create arrays for character groups (uppercase, lowercase, numbers, special characters)
