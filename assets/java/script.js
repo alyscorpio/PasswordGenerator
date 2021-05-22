@@ -27,14 +27,14 @@ var passLength = window.prompt("How many characters do you want in your stupid l
   }
 
 // CAPITAL LETTERS
-var passCap = window.confirm("Ugh, fine. Do you want any ugly UPPERCASE letters in your stupid password?");
+var passCap = window.confirm("Ugh, fine. Do you want any ugly UPPERCASE letters in your password?");
 
 // LOWERCASE LETTERS
 var passNoCap = window.confirm("Of course. How predictable. How about lame LOWERCASE letters?");
 console.log(passCap);
 
 // NUMBERS
-var passNumb = window.confirm("Could you at least try to surprise me? What about Nausiating NUMBERS?");
+var passNumb = window.confirm("Could you at least try to surprise me? What about nausiating NUMBERS?");
 console.log(passNumb);
 
 // SPECIAL CHARACTERS
